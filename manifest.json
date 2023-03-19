@@ -1,0 +1,80 @@
+{
+
+  "manifest_version": 2,
+  "name": "ChromeTools",
+  "version": "1.0",
+
+  "description": "The Chrome DevTools as an exstension.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "background",
+    "bookmarks",
+    "browsingData",
+    "clipboardRead",
+    "clipboardWrite",
+    "contentSettings",
+    "contextMenus",
+    "cookies",
+    "debugger",
+    "declarativeContent",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "declarativeWebRequest",
+    "desktopCapture",
+    "dns",
+    "downloads",
+    "fontSettings",
+    "gcm",
+    "geolocation",
+    "history",
+    "identity",
+    "idle",
+    "management",
+    "nativeMessaging",
+    "notifications",
+    "pageCapture",
+    "power",
+    "printerProvider",
+    "privacy",
+    "processes",
+    "proxy",
+    "search",
+    "sessions",
+    "storage",
+    "system.cpu",
+    "system.display",
+    "system.memory",
+    "system.storage",
+    "tabCapture",
+    "tabs",
+    "topSites",
+    "tts",
+    "ttsEngine",
+    "unlimitedStorage",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "windows"
+],
+
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["start.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "ChromeDevTools",
+    "default_popup": "out/devtools_app.html",
+    "default_icon": "icons/border-48.png"
+  }
+  
+  
+
+}
